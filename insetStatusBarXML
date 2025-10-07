@@ -1,0 +1,8 @@
+ ViewCompat.setOnApplyWindowInsetsListener(binding.appbar) { view, insets ->
+            val types = WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.displayCutout()
+            val insetsForTop = insets.getInsets(types)
+            view.updatePadding(top = insetsForTop.top)
+            insets
+        }
+
+//падинг в хмл разметке от статус баров 
