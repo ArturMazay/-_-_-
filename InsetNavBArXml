@@ -1,0 +1,8 @@
+
+       
+        ViewCompat.setOnApplyWindowInsetsListener(binding.navbar) { v, insets ->
+            val sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.updatePadding(bottom = sysBars.bottom)
+            insets
+        }
+//отсутпы от навбра хмл могут быть кнопки, высчитывается размер навбара системно
